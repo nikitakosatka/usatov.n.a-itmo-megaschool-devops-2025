@@ -17,12 +17,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download dependencies
+      - name: Download dependencies Time Server
         run: |
-          helm dependency build charts/marketplace-assistant
+          helm dependency build charts/time-server
 
-      - name: helm-check
+      - name: helm-check Time Server
         uses: igabaydulin/helm-check-action@0.2.1
         env:
-          CHART_LOCATION:
-          CHART_VALUES:
+          CHART_LOCATION: charts/time-server
+          CHART_VALUES: charts/time-server/values.yaml
+
+      - name: Download dependencies Auth Server
+        run: |
+          helm dependency build charts/auth-server
+
+      - name: helm-check Auth Server
+        uses: igabaydulin/helm-check-action@0.2.1
+        env:
+          CHART_LOCATION: charts/auth-server
+          CHART_VALUES: charts/auth-server/values.yaml
