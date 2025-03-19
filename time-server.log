@@ -1,0 +1,7 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2025-03-19 09:31:48.980 | INFO     | app:startup:11 - Running time server
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     10.244.0.17:35170 - "GET /api/v1/time-server/get_time?ntp_server=ntp0.ntp-servers.net HTTP/1.1" 200 OK
+INFO:     10.244.0.17:35180 - "GET /api/v1/service-keys/get_svckey?svc_token=Nikita+Usatov HTTP/1.1" 200 OK
