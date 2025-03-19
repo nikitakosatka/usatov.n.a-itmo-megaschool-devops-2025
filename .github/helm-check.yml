@@ -1,0 +1,2 @@
+- name: GitHub Action for Helm Templates Validation
+  uses: igabaydulin/helm-check-action@0.2.1
